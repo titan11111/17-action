@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🌆 サイバーパンク・ネオシティ・アクション</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="cyber-bg">
+    <div class="cyber-grid"></div>
+    <div class="neon-lines"></div>
+    <div class="hologram-particles"></div>
+  </div>
+
+  <div id="gameContainer">
+    <div id="gameInfo">
+      <div id="stageInfo">
+        <span class="neon-text">SECTOR</span> 
+        <span id="currentStage" class="stage-number">1</span> 
+        <span class="neon-text">/ 5</span>
+      </div>
+      <div id="lifeInfo">
+        <span class="neon-text">LIFE</span> 
+        <span id="currentLife" class="life-number">3</span>
+        <div class="life-bar">
+          <div class="life-fill"></div>
+        </div>
+      </div>
+      <div id="soundControls">
+        <button id="soundToggle" class="cyber-btn">🎵</button>
+        <button id="volumeUp" class="cyber-btn">⬆</button>
+        <button id="volumeDown" class="cyber-btn">⬇</button>
+      </div>
+    </div>
+
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+    <div id="mobileControls">
+      <button id="leftBtn" class="control-btn">◀</button>
+      <button id="jumpBtn" class="control-btn jump-btn">⬆</button>
+      <button id="rightBtn" class="control-btn">▶</button>
+    </div>
+  </div>
+
+  <div id="messageScreen" class="game-message">
+    <div class="message-content">
+      <div class="message-header">
+        <div id="messageIcon" class="cyber-icon">🤖</div>
+        <h2 id="messageTitle" class="cyber-title">SYSTEM BOOT</h2>
+        <div class="scan-line"></div>
+      </div>
+      <div class="message-body">
+        <p id="messageText" class="cyber-text">Neural interface activated. Ready for data extraction.</p>
+        <div class="loading-bar">
+          <div class="loading-progress"></div>
+        </div>
+      </div>
+      <div class="message-footer">
+        <button id="messageButton" class="cyber-start-btn">
+          <span class="btn-text">EXECUTE</span>
+          <span class="btn-arrow">→</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- プレイヤー画像 -->
+  <img id="playerImage" src="hero.png" style="display: none;" />
+
+  <!-- 敵画像（ステージごと） -->
+  <img id="enemy1" src="enemy7.png" style="display: none;" />
+  <img id="enemy2" src="enemy8.png" style="display: none;" />
+  <img id="enemy3" src="enemy9.png" style="display: none;" />
+  <img id="enemy4" src="enemy10.png" style="display: none;" />
+  <img id="enemy5" src="maou.png" style="display: none;" />
+
+  <!-- オーディオファイル -->
+  <audio id="bgm" loop src="audio/run.mp3"></audio>
+  <audio id="seJump" src="audio/tobu.mp3"></audio>
+  <audio id="seCollect" src="audio/effect.wav"></audio>
+  <audio id="seHit" src="audio/effect.wav"></audio>
+  <audio id="seStageClear" src="audio/effect.wav"></audio>
+  <audio id="seGameOver" src="audio/effect.wav"></audio>
+
+  <!-- スクリプト -->
+  <script src="script.js"></script>
+</body>
+</html>
