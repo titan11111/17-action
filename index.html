@@ -2,14 +2,40 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0" />
   <title>🌆 サイバーパンク・ネオシティ・アクション</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* タッチ操作の最適化 */
+    body {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+    
+    /* iOSの安全エリア対応 */
+    @supports (padding: max(0px)) {
+      #gameContainer {
+        padding-left: max(10px, env(safe-area-inset-left));
+        padding-right: max(10px, env(safe-area-inset-right));
+        padding-bottom: max(10px, env(safe-area-inset-bottom));
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="cyber-bg">
     <div class="cyber-grid"></div>
-    <div class="neon-lines"></div>
+    <div class="neon-lines">
+      <div class="neon-line"></div>
+      <div class="neon-line"></div>
+      <div class="neon-line"></div>
+      <div class="neon-line"></div>
+    </div>
     <div class="hologram-particles"></div>
   </div>
 
@@ -36,10 +62,14 @@
 
     <canvas id="gameCanvas" width="800" height="600"></canvas>
 
+    <!-- モバイル専用コントロール -->
     <div id="mobileControls">
-      <button id="leftBtn" class="control-btn">◀</button>
-      <button id="jumpBtn" class="control-btn jump-btn">⬆</button>
-      <button id="rightBtn" class="control-btn">▶</button>
+      <!-- 左側：移動ボタン -->
+      <button id="leftBtn" class="control-btn" type="button">◀</button>
+      <button id="rightBtn" class="control-btn" type="button">▶</button>
+      
+      <!-- 右側：ジャンプボタン -->
+      <button id="jumpBtn" class="control-btn jump-btn" type="button">⬆</button>
     </div>
   </div>
 
@@ -66,22 +96,22 @@
   </div>
 
   <!-- プレイヤー画像 -->
-  <img id="playerImage" src="hero.png" style="display: none;" />
+  <img id="playerImage" src="hero.png" style="display: none;" alt="Player" />
 
   <!-- 敵画像（ステージごと） -->
-  <img id="enemy1" src="enemy7.png" style="display: none;" />
-  <img id="enemy2" src="enemy8.png" style="display: none;" />
-  <img id="enemy3" src="enemy9.png" style="display: none;" />
-  <img id="enemy4" src="enemy10.png" style="display: none;" />
-  <img id="enemy5" src="maou.png" style="display: none;" />
+  <img id="enemy1" src="enemy7.png" style="display: none;" alt="Enemy 1" />
+  <img id="enemy2" src="enemy8.png" style="display: none;" alt="Enemy 2" />
+  <img id="enemy3" src="enemy9.png" style="display: none;" alt="Enemy 3" />
+  <img id="enemy4" src="enemy10.png" style="display: none;" alt="Enemy 4" />
+  <img id="enemy5" src="maou.png" style="display: none;" alt="Boss" />
 
   <!-- オーディオファイル -->
-  <audio id="bgm" loop src="audio/run.mp3"></audio>
-  <audio id="seJump" src="audio/tobu.mp3"></audio>
-  <audio id="seCollect" src="audio/effect.wav"></audio>
-  <audio id="seHit" src="audio/effect.wav"></audio>
-  <audio id="seStageClear" src="audio/effect.wav"></audio>
-  <audio id="seGameOver" src="audio/effect.wav"></audio>
+  <audio id="bgm" loop src="audio/run.mp3" preload="auto"></audio>
+  <audio id="seJump" src="audio/tobu.mp3" preload="auto"></audio>
+  <audio id="seCollect" src="audio/effect.wav" preload="auto"></audio>
+  <audio id="seHit" src="audio/effect.wav" preload="auto"></audio>
+  <audio id="seStageClear" src="audio/effect.wav" preload="auto"></audio>
+  <audio id="seGameOver" src="audio/effect.wav" preload="auto"></audio>
 
   <!-- スクリプト -->
   <script src="script.js"></script>
