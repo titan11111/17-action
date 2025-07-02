@@ -182,6 +182,181 @@ const stages = [
       { x: 580, y: 100, width: 20, height: 20, type: 'highJump' } // ハイジャンプ追加
     ],
     goal: { x: 240, y: 60, width: 40, height: 40 }
+  },
+  {
+    name: "CYBER_FORTRESS",
+    bgColor: "#0a0a2a",
+    platforms: [
+      { x: 0, y: 480, width: 150, height: 20 },
+      { x: 200, y: 380, width: 100, height: 20 },
+      { x: 350, y: 280, width: 80, height: 20 },
+      { x: 500, y: 180, width: 100, height: 20 },
+      { x: 650, y: 380, width: 150, height: 20 },
+      { x: 300, y: 480, width: 120, height: 20 },
+      { x: 0, y: canvas.height - 20, width: canvas.width, height: 20 }
+    ],
+    enemies: [
+      { x: 250, y: 340, width: 35, height: 35, startX: 250, range: 80, velocityX: 2.2, direction: 1 },
+      { x: 550, y: 140, width: 35, height: 35, startX: 550, range: 60, velocityX: 2.5, direction: -1 },
+      { x: 700, y: 340, width: 35, height: 35, startX: 700, range: 70, velocityX: 2.8, direction: 1 },
+      { x: 350, y: 440, width: 35, height: 35, startX: 350, range: 50, velocityX: 3, direction: -1 }
+    ],
+    items: [
+      { x: 250, y: 350, width: 20, height: 20, type: 'coin' },
+      { x: 550, y: 150, width: 20, height: 20, type: 'coin' },
+      { x: 700, y: 350, width: 20, height: 20, type: 'heart' },
+      { x: 380, y: 250, width: 20, height: 20, type: 'speedBoost' },
+      { x: 350, y: 450, width: 20, height: 20, type: 'shield' }
+    ],
+    goal: { x: 750, y: 340, width: 30, height: 30 }
+  },
+  {
+    name: "NEON_DEPTHS",
+    bgColor: "#2a1a0a",
+    platforms: [
+      { x: 0, y: 450, width: 120, height: 20 },
+      { x: 170, y: 350, width: 80, height: 20 },
+      { x: 300, y: 250, width: 100, height: 20 },
+      { x: 450, y: 400, width: 90, height: 20 },
+      { x: 600, y: 300, width: 120, height: 20 },
+      { x: 750, y: 200, width: 50, height: 20 },
+      { x: 200, y: 500, width: 400, height: 20 },
+      { x: 0, y: canvas.height - 20, width: canvas.width, height: 20 }
+    ],
+    enemies: [
+      { x: 200, y: 310, width: 35, height: 35, startX: 200, range: 60, velocityX: 2.5, direction: 1 },
+      { x: 330, y: 210, width: 35, height: 35, startX: 330, range: 50, velocityX: 3, direction: -1 },
+      { x: 500, y: 360, width: 35, height: 35, startX: 500, range: 40, velocityX: 2.8, direction: 1 },
+      { x: 650, y: 260, width: 35, height: 35, startX: 650, range: 70, velocityX: 3.2, direction: -1 },
+      { x: 300, y: 460, width: 35, height: 35, startX: 300, range: 200, velocityX: 2, direction: 1 }
+    ],
+    items: [
+      { x: 200, y: 320, width: 20, height: 20, type: 'coin' },
+      { x: 330, y: 220, width: 20, height: 20, type: 'coin' },
+      { x: 500, y: 370, width: 20, height: 20, type: 'coin' },
+      { x: 650, y: 270, width: 20, height: 20, type: 'highJump' },
+      { x: 400, y: 470, width: 20, height: 20, type: 'heart' },
+      { x: 750, y: 170, width: 20, height: 20, type: 'shield' }
+    ],
+    goal: { x: 750, y: 160, width: 30, height: 30 }
+  },
+  {
+    name: "DIGITAL_STORM",
+    bgColor: "#1a2a1a",
+    platforms: [
+      { x: 0, y: 500, width: 100, height: 20 },
+      { x: 150, y: 420, width: 70, height: 20 },
+      { x: 270, y: 340, width: 90, height: 20 },
+      { x: 410, y: 260, width: 80, height: 20 },
+      { x: 540, y: 180, width: 100, height: 20 },
+      { x: 690, y: 100, width: 110, height: 20 },
+      { x: 100, y: 200, width: 60, height: 20 },
+      { x: 350, y: 450, width: 150, height: 20 },
+      { x: 0, y: canvas.height - 20, width: canvas.width, height: 20 }
+    ],
+    enemies: [
+      { x: 180, y: 380, width: 40, height: 40, startX: 180, range: 80, velocityX: 3, direction: 1 },
+      { x: 300, y: 300, width: 40, height: 40, startX: 300, range: 60, velocityX: 3.5, direction: -1 },
+      { x: 440, y: 220, width: 40, height: 40, startX: 440, range: 50, velocityX: 3.2, direction: 1 },
+      { x: 570, y: 140, width: 40, height: 40, startX: 570, range: 70, velocityX: 3.8, direction: -1 },
+      { x: 400, y: 410, width: 40, height: 40, startX: 400, range: 100, velocityX: 2.5, direction: 1 },
+      { x: 130, y: 160, width: 40, height: 40, startX: 130, range: 30, velocityX: 4, direction: -1 }
+    ],
+    items: [
+      { x: 180, y: 390, width: 20, height: 20, type: 'coin' },
+      { x: 300, y: 310, width: 20, height: 20, type: 'coin' },
+      { x: 440, y: 230, width: 20, height: 20, type: 'speedBoost' },
+      { x: 570, y: 150, width: 20, height: 20, type: 'coin' },
+      { x: 720, y: 70, width: 20, height: 20, type: 'heart' },
+      { x: 400, y: 420, width: 20, height: 20, type: 'shield' },
+      { x: 130, y: 170, width: 20, height: 20, type: 'highJump' }
+    ],
+    goal: { x: 750, y: 60, width: 30, height: 30 }
+  },
+  {
+    name: "VOID_NEXUS",
+    bgColor: "#2a0a1a",
+    platforms: [
+      { x: 0, y: 500, width: 80, height: 20 },
+      { x: 130, y: 450, width: 60, height: 20 },
+      { x: 240, y: 380, width: 80, height: 20 },
+      { x: 370, y: 300, width: 70, height: 20 },
+      { x: 490, y: 220, width: 90, height: 20 },
+      { x: 630, y: 140, width: 80, height: 20 },
+      { x: 750, y: 60, width: 50, height: 20 },
+      { x: 100, y: 320, width: 50, height: 20 },
+      { x: 200, y: 240, width: 60, height: 20 },
+      { x: 550, y: 380, width: 100, height: 20 },
+      { x: 0, y: canvas.height - 20, width: canvas.width, height: 20 }
+    ],
+    enemies: [
+      { x: 160, y: 410, width: 40, height: 40, startX: 160, range: 60, velocityX: 3.5, direction: 1 },
+      { x: 270, y: 340, width: 40, height: 40, startX: 270, range: 50, velocityX: 4, direction: -1 },
+      { x: 400, y: 260, width: 40, height: 40, startX: 400, range: 40, velocityX: 3.8, direction: 1 },
+      { x: 520, y: 180, width: 40, height: 40, startX: 520, range: 60, velocityX: 4.2, direction: -1 },
+      { x: 660, y: 100, width: 40, height: 40, startX: 660, range: 50, velocityX: 4.5, direction: 1 },
+      { x: 130, y: 280, width: 40, height: 40, startX: 130, range: 30, velocityX: 3, direction: -1 },
+      { x: 580, y: 340, width: 40, height: 40, startX: 580, range: 70, velocityX: 3.2, direction: 1 }
+    ],
+    items: [
+      { x: 160, y: 420, width: 20, height: 20, type: 'coin' },
+      { x: 270, y: 350, width: 20, height: 20, type: 'speedBoost' },
+      { x: 400, y: 270, width: 20, height: 20, type: 'coin' },
+      { x: 520, y: 190, width: 20, height: 20, type: 'highJump' },
+      { x: 660, y: 110, width: 20, height: 20, type: 'coin' },
+      { x: 770, y: 30, width: 20, height: 20, type: 'heart' },
+      { x: 130, y: 290, width: 20, height: 20, type: 'shield' },
+      { x: 580, y: 350, width: 20, height: 20, type: 'coin' }
+    ],
+    goal: { x: 770, y: 20, width: 30, height: 30 }
+  },
+  {
+    name: "FINAL_CORE",
+    bgColor: "#3a0a3a",
+    platforms: [
+      { x: 0, y: canvas.height - 20, width: canvas.width, height: 20 },
+      { x: 0, y: 500, width: 60, height: 20 },
+      { x: 100, y: 460, width: 50, height: 20 },
+      { x: 190, y: 400, width: 60, height: 20 },
+      { x: 290, y: 340, width: 50, height: 20 },
+      { x: 380, y: 280, width: 70, height: 20 },
+      { x: 490, y: 220, width: 60, height: 20 },
+      { x: 590, y: 160, width: 50, height: 20 },
+      { x: 680, y: 100, width: 60, height: 20 },
+      { x: 750, y: 40, width: 50, height: 20 },
+      { x: 150, y: 320, width: 40, height: 20 },
+      { x: 250, y: 260, width: 40, height: 20 },
+      { x: 350, y: 200, width: 40, height: 20 },
+      { x: 450, y: 140, width: 40, height: 20 },
+      { x: 530, y: 380, width: 80, height: 20 },
+      { x: 650, y: 320, width: 60, height: 20 }
+    ],
+    enemies: [
+      { x: 130, y: 420, width: 45, height: 45, startX: 130, range: 60, velocityX: 4, direction: 1 },
+      { x: 220, y: 360, width: 45, height: 45, startX: 220, range: 50, velocityX: 4.5, direction: -1 },
+      { x: 320, y: 300, width: 45, height: 45, startX: 320, range: 40, velocityX: 4.2, direction: 1 },
+      { x: 410, y: 240, width: 45, height: 45, startX: 410, range: 80, velocityX: 5, direction: -1 },
+      { x: 520, y: 180, width: 45, height: 45, startX: 520, range: 30, velocityX: 4.8, direction: 1 },
+      { x: 620, y: 120, width: 45, height: 45, startX: 620, range: 60, velocityX: 5.2, direction: -1 },
+      { x: 710, y: 60, width: 45, height: 45, startX: 710, range: 40, velocityX: 5.5, direction: 1 },
+      { x: 180, y: 280, width: 45, height: 45, startX: 180, range: 30, velocityX: 4.5, direction: -1 },
+      { x: 380, y: 160, width: 45, height: 45, startX: 380, range: 40, velocityX: 5, direction: 1 },
+      { x: 560, y: 340, width: 45, height: 45, startX: 560, range: 50, velocityX: 4.2, direction: -1 }
+    ],
+    items: [
+      { x: 130, y: 430, width: 20, height: 20, type: 'coin' },
+      { x: 220, y: 370, width: 20, height: 20, type: 'speedBoost' },
+      { x: 320, y: 310, width: 20, height: 20, type: 'coin' },
+      { x: 410, y: 250, width: 20, height: 20, type: 'highJump' },
+      { x: 520, y: 190, width: 20, height: 20, type: 'coin' },
+      { x: 620, y: 130, width: 20, height: 20, type: 'shield' },
+      { x: 710, y: 70, width: 20, height: 20, type: 'coin' },
+      { x: 770, y: 10, width: 20, height: 20, type: 'heart' },
+      { x: 180, y: 290, width: 20, height: 20, type: 'coin' },
+      { x: 380, y: 170, width: 20, height: 20, type: 'coin' },
+      { x: 560, y: 350, width: 20, height: 20, type: 'speedBoost' }
+    ],
+    goal: { x: 770, y: 0, width: 30, height: 30 }
   }
 ];
 let currentStageData = stages[0];
