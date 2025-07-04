@@ -44,8 +44,7 @@
       <div id="stageInfo">
         <span class="neon-text">SECTOR</span> 
         <span id="currentStage" class="stage-number">1</span> 
-        <span class="neon-text">/ 5</span>
-      </div>
+        <span class="neon-text">/ 10</span> </div>
       <div id="lifeInfo">
         <span class="neon-text">LIFE</span> 
         <span id="currentLife" class="life-number">3</span>
@@ -62,13 +61,10 @@
 
     <canvas id="gameCanvas" width="800" height="600"></canvas>
 
-    <!-- モバイル専用コントロール -->
     <div id="mobileControls">
-      <!-- 左側：移動ボタン -->
       <button id="leftBtn" class="control-btn" type="button">◀</button>
       <button id="rightBtn" class="control-btn" type="button">▶</button>
       
-      <!-- 右側：ジャンプボタン -->
       <button id="jumpBtn" class="control-btn jump-btn" type="button">⬆</button>
     </div>
   </div>
@@ -95,17 +91,19 @@
     </div>
   </div>
 
-  <!-- プレイヤー画像 -->
   <img id="playerImage" src="hero.png" style="display: none;" alt="Player" />
 
-  <!-- 敵画像（ステージごと） -->
   <img id="enemy1" src="enemy7.png" style="display: none;" alt="Enemy 1" />
   <img id="enemy2" src="enemy8.png" style="display: none;" alt="Enemy 2" />
   <img id="enemy3" src="enemy9.png" style="display: none;" alt="Enemy 3" />
   <img id="enemy4" src="enemy10.png" style="display: none;" alt="Enemy 4" />
   <img id="enemy5" src="maou.png" style="display: none;" alt="Boss" />
+  <img id="goburin" src="goburin.png" style="display: none;" alt="Goburin" />
+  <img id="naito" src="naito.png" style="display: none;" alt="Knight" />
+  <img id="summon2" src="summon_2.png" style="display: none;" alt="Summoner 2" />
+  <img id="summon3" src="summon_3.jpg" style="display: none;" alt="Summoner 3" />
+  <img id="summon5" src="summon_5.jpg" style="display: none;" alt="Summoner 5" />
 
-  <!-- オーディオファイル -->
   <audio id="bgm" loop src="audio/run.mp3" preload="auto"></audio>
   <audio id="seJump" src="audio/tobu.mp3" preload="auto"></audio>
   <audio id="seCollect" src="audio/effect.wav" preload="auto"></audio>
@@ -113,7 +111,6 @@
   <audio id="seStageClear" src="audio/effect.wav" preload="auto"></audio>
   <audio id="seGameOver" src="audio/effect.wav" preload="auto"></audio>
 
-  <!-- スクリプト -->
   <script src="script.js"></script>
 </body>
 </html>
